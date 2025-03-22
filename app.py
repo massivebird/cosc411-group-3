@@ -17,3 +17,4 @@ def styles():
 
 with app.test_request_context():
     url_for('static', filename='style.css')
+    url_for('static', filename='favicon.png')
