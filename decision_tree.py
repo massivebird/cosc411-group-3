@@ -13,7 +13,7 @@ from imblearn.over_sampling import SMOTE
 os.environ["LOKY_MAX_CPU_COUNT"] = "4"  # Adjust this to match your physical core count
 
 # Load the dataset
-file_path = "OriginalDataset.csv"
+file_path = "jupyter/OriginalDataset.csv"
 df = pd.read_csv(file_path)
 
 # Check for missing values and fill them with column means if necessary
