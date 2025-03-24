@@ -12,64 +12,69 @@
       <h1>THAI Careers</h1>
       <span class="subtitle">"This Has AI" Careers</span>
 
-      <br>
+      <br><br>
+
+      <p>Enter your scores:</p>
+
       <form action="/result" autocomplete="off">
 
          <table>
 
             <tr>
                <td><label for="open">Openness</label></td>
-               <td><input type="text" id="open" name="open" required /></td>
+               <td><input type="text" id="open" name="open" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
             <tr>
                <td><label for="cons">Conscientiousness</label></td>
-               <td><input type="text" id="cons" name="cons" required /></td>
+               <td><input type="text" id="cons" name="cons" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
             <tr>
                <td><label for="extra">Extraversion</label></td>
-               <td><input type="text" id="extra" name="extra" required /></td>
+               <td><input type="text" id="extra" name="extra" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
             <tr>
                <td><label for="agree">Agreeableness</label></td>
-               <td><input type="text" id="agree" name="agree" required /></td>
+               <td><input type="text" id="agree" name="agree" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
             <tr>
                <td><label for="neuro">Neuroticism</label></td>
-               <td><input type="text" id="neuro" name="neuro" required /></td>
+               <td><input type="text" id="neuro" name="neuro" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
             <tr>
                <td><label for="numer">Numerical Aptitude</label></td>
-               <td><input type="text" id="numer" name="numer" required /></td>
+               <td><input type="text" id="numer" name="numer" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
             <tr>
                <td><label for="spatial">Spatial Aptitude</label></td>
-               <td><input type="text" id="spatial" name="spatial" required /></td>
+               <td><input type="text" id="spatial" name="spatial" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
 
             <tr>
                <td><label for="percep">Perceptual Aptitude</label></td>
-               <td><input type="text" id="percep" name="percep" required /></td>
+               <td><input type="text" id="percep" name="percep" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
 
             <tr>
                <td><label for="abstr">Abstract Reasoning</label></td>
-               <td><input type="text" id="abstr" name="abstr" required /></td>
+               <td><input type="text" id="abstr" name="abstr" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
             <tr>
                <td><label for="verb">Verbal Reasoning</label></td>
-               <td><input type="text" id="verb" name="verb" required /></td>
+               <td><input type="text" id="verb" name="verb" pattern="[0-9].?[0-9]*" required /></td>
             </tr>
 
          </table>
+
+         <br>
 
          <button>Submit</button>
       </form>
