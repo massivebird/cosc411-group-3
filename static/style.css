@@ -2,7 +2,15 @@
    font-family: 'Brush Script MT', cursive;
 }
 
+h1 {
+   margin-bottom: 5px;
+}
+
 .subtitle {
    font-style: italic;
    color: #777777;
+}
+
+table {
+   margin-top: 30px;
 }
