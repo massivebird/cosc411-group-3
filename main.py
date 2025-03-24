@@ -16,8 +16,20 @@ def main():
 # https://flask.palletsprojects.com/en/stable/quickstart/#the-request-object
 @app.route("/result")
 def result():
-    open = request.args.get("open")
-    return render_template('result.html', result=open)
+    career = model.predict([[
+        request.args.get("open"),
+        request.args.get("cons"),
+        request.args.get("extra"),
+        request.args.get("agree"),
+        request.args.get("neuro"),
+        request.args.get("numer"),
+        request.args.get("spatial"),
+        request.args.get("percep"),
+        request.args.get("abstr"),
+        request.args.get("verb"),
+    ]])
+
+    return render_template('result.html', result=career[0])
 
 @app.route("/style.css")
 def styles():
