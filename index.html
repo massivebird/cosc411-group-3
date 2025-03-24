@@ -5,12 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>THAI Careers</title>
       <link rel="icon" type="image/x-icon" href="static/favicon.png">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link href="static/style.css" rel="stylesheet">
    </head>
    <body>
 
       <h1>THAI Careers</h1>
-      <span class="subtitle">"This Has AI" Careers</span>
+      <small class="text-muted">"This Has AI" Careers</small>
 
       <br><br>
 
@@ -18,70 +19,62 @@
 
       <form action="/result" autocomplete="off">
 
-         <table>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="open">Openness</label>
+            <input type="text" id="open" name="open" pattern="[0-9].?[0-9]*" required />
+         </div>
 
-            <tr>
-               <th>Attribute</th>
-               <th>Score</th>
-            </tr>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="cons">Conscientiousness</label>
+            <input type="text" id="cons" name="cons" pattern="[0-9].?[0-9]*" required />
+         </div>
 
-            <tr>
-               <td><label for="open">Openness</label></td>
-               <td><input type="text" id="open" name="open" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="extra">Extraversion</label>
+            <input type="text" id="extra" name="extra" pattern="[0-9].?[0-9]*" required />
+         </div>
 
-            <tr>
-               <td><label for="cons">Conscientiousness</label></td>
-               <td><input type="text" id="cons" name="cons" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="agree">Agreeableness</label>
+            <input type="text" id="agree" name="agree" pattern="[0-9].?[0-9]*" required />
+         </div>
 
-            <tr>
-               <td><label for="extra">Extraversion</label></td>
-               <td><input type="text" id="extra" name="extra" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
-
-            <tr>
-               <td><label for="agree">Agreeableness</label></td>
-               <td><input type="text" id="agree" name="agree" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
-
-            <tr>
-               <td><label for="neuro">Neuroticism</label></td>
-               <td><input type="text" id="neuro" name="neuro" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
-
-            <tr>
-               <td><label for="numer">Numerical Aptitude</label></td>
-               <td><input type="text" id="numer" name="numer" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
-
-            <tr>
-               <td><label for="spatial">Spatial Aptitude</label></td>
-               <td><input type="text" id="spatial" name="spatial" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="neuro">Neuroticism</label>
+            <input type="text" id="neuro" name="neuro" pattern="[0-9].?[0-9]*" required />
+         </div>
 
 
-            <tr>
-               <td><label for="percep">Perceptual Aptitude</label></td>
-               <td><input type="text" id="percep" name="percep" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="numer">Numerical Aptitude</label>
+            <input type="text" id="numer" name="numer" pattern="[0-9].?[0-9]*" required />
+         </div>
 
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="spatial">Spatial Aptitude</label>
+            <input type="text" id="spatial" name="spatial" pattern="[0-9].?[0-9]*" required />
+         </div>
 
-            <tr>
-               <td><label for="abstr">Abstract Reasoning</label></td>
-               <td><input type="text" id="abstr" name="abstr" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="percep">Perceptual Aptitude</label>
+            <input type="text" id="percep" name="percep" pattern="[0-9].?[0-9]*" required />
+         </div>
 
-            <tr>
-               <td><label for="verb">Verbal Reasoning</label></td>
-               <td><input type="text" id="verb" name="verb" pattern="[0-9].?[0-9]*" required /></td>
-            </tr>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="abstr">Abstract Reasoning</label>
+            <input type="text" id="abstr" name="abstr" pattern="[0-9].?[0-9]*" required />
+         </div>
 
-         </table>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label" for="verb">Verbal Reasoning</label>
+            <input type="text" id="verb" name="verb" pattern="[0-9].?[0-9]*" required />
+         </div>
+
+         </div>
 
          <br>
 
-         <button>Receive career recommendation</button>
+         <button class="btn btn-primary" type="submit">Receive career recommendation</button>
       </form>
 
    </body>
