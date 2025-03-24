@@ -1,4 +1,4 @@
-# cosc411-group-3
+# THAI Careers
 
 ## Running the server
 
