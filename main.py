@@ -1,4 +1,7 @@
+import decision_tree
 from flask import Flask, url_for
+
+model = decision_tree.model();
 
 app = Flask(__name__)
 
