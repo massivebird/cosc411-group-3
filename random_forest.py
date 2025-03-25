@@ -73,7 +73,7 @@ class Model:
         y_pred = classifier.predict(X_test)
         print(y_pred)
 
-    # Returns the name of a career based on the input values.
+    # Returns the name of a career based on normalized input values.
     def predict(self, vals):
         pred_id = self.classifier.predict(vals)
         return self.encoder.inverse_transform(pred_id)

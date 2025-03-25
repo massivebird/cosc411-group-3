@@ -5,17 +5,18 @@ model = random_forest.model();
 
 app = Flask(__name__)
 
+# Returns the contents of a file as a string.
 def file_contents(pathname):
     f = open(pathname, "r")
     return f.read()
 
 @app.route("/")
-def main():
+def root_page():
     return file_contents("index.html")
 
 # https://flask.palletsprojects.com/en/stable/quickstart/#the-request-object
 @app.route("/result")
-def result():
+def result_page():
     linguistic = request.args.get("linguistic")
     musical = request.args.get("musical")
     bodily = request.args.get("bodily")
@@ -48,11 +49,7 @@ def result():
 
     return render_template('result.html', result=career[0])
 
-@app.route("/style.css")
-def styles():
-    f = open("style.css", "r")
-    return f.read()
-
+# Create endpoints for serving static files.
 with app.test_request_context():
     url_for('static', filename='style.css')
     url_for('static', filename='favicon.png')
