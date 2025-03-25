@@ -15,66 +15,51 @@
 
       <br><br>
 
-      <p>Enter your scores below:</p>
-
       <form action="/result" autocomplete="off">
 
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="open">Openness</label>
-            <input type="text" id="open" name="open" pattern="[0-9].?[0-9]*" required />
+         <div class="form-group">
+            <label for="linguistic">Rate your linguistic and verbal abilities on a scale from 5 to 20:</label>
+            <input class="form-control" type="text" id="linguistic" name="linguistic" pattern="[0-9].?[0-9]*" required />
          </div>
 
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="cons">Conscientiousness</label>
-            <input type="text" id="cons" name="cons" pattern="[0-9].?[0-9]*" required />
+         <div class="form-group">
+            <label for="musical">Please rate your musical intelligence on a scale from 5 to 20:</label>
+            <input class="form-control" type="text" id="musical" name="musical" pattern="[0-9].?[0-9]*" required />
          </div>
 
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="extra">Extraversion</label>
-            <input type="text" id="extra" name="extra" pattern="[0-9].?[0-9]*" required />
+         <div class="form-group">
+            <label for="bodily">Please rate your ability to do physical tasks on a scale from 5 to 20:</label>
+            <input class="form-control" type="text" id="bodily" name="bodily" pattern="[0-9].?[0-9]*" required />
          </div>
 
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="agree">Agreeableness</label>
-            <input type="text" id="agree" name="agree" pattern="[0-9].?[0-9]*" required />
+         <div class="form-group">
+            <label for="logicalMath">Please rate your logical reasoning and mathematical ability on a scale from 5 to 20:</label>
+            <input class="form-control" type="text" id="logicalMath" name="logicalMath" pattern="[0-9].?[0-9]*" required />
          </div>
 
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="neuro">Neuroticism</label>
-            <input type="text" id="neuro" name="neuro" pattern="[0-9].?[0-9]*" required />
+         <div class="form-group">
+            <label for="spatialVis">Please rate your spatial awareness and ability to visualize objects in space on a scale from 5 to 20:</label>
+            <input class="form-control" type="text" id="spatialVis" name="spatialVis" pattern="[0-9].?[0-9]*" required />
          </div>
 
-
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="numer">Numerical Aptitude</label>
-            <input type="text" id="numer" name="numer" pattern="[0-9].?[0-9]*" required />
+         <div class="form-group">
+            <label for="interpersonal">Please rate your ability and comfort interacting with others on a scale from 2 to 20:</label>
+            <input class="form-control" type="text" id="interpersonal" name="interpersonal" pattern="[0-9].?[0-9]*" required />
          </div>
 
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="spatial">Spatial Aptitude</label>
-            <input type="text" id="spatial" name="spatial" pattern="[0-9].?[0-9]*" required />
+         <div class="form-group">
+            <label for="intrapersonal">Please rate your self-awareness and capacity for introspection on a scale from 5 to 20:</label>
+            <input class="form-control" type="text" id="intrapersonal" name="intrapersonal" pattern="[0-9].?[0-9]*" required />
          </div>
 
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="percep">Perceptual Aptitude</label>
-            <input type="text" id="percep" name="percep" pattern="[0-9].?[0-9]*" required />
-         </div>
-
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="abstr">Abstract Reasoning</label>
-            <input type="text" id="abstr" name="abstr" pattern="[0-9].?[0-9]*" required />
-         </div>
-
-         <div class="form-group row">
-            <label class="col-sm-1 col-form-label" for="verb">Verbal Reasoning</label>
-            <input type="text" id="verb" name="verb" pattern="[0-9].?[0-9]*" required />
-         </div>
-
+         <div class="form-group">
+            <label for="naturalist">Please rate your understanding and affinity for the natural world on a scale from 0 to 20:</label>
+            <input class="form-control" type="text" id="naturalist" name="naturalist" pattern="[0-9].?[0-9]*" required />
          </div>
 
          <br>
 
-         <button class="btn btn-primary" type="submit">Receive career recommendation</button>
+         <button class="btn btn-primary" type="submit">Generate career recommendation</button>
       </form>
 
    </body>
