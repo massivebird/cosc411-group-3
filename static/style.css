@@ -6,3 +6,11 @@ body {
    font-style: italic;
    color: #777777;
 }
+
+input {
+   width: 100px !important;
+}
+
+#form-submit {
+   width: fit-content;
+}
