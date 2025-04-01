@@ -11,7 +11,13 @@
    <body>
 
       <h1>Results</h1>
-      <p>Recommended career: <b>{{ result }}</b></p>
+      <p>Recommended careers in descending order:</p>
+
+      <ol>
+         <li><b>{{ career1 }}</b> (best match)</li>
+         <li><b>{{ career2 }}</b></li>
+         <li><b>{{ career3 }}</b></li>
+      </ol>
 
       <form action="/">
          <button class="btn btn-primary">Back</button>

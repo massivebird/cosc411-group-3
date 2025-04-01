@@ -1,6 +1,8 @@
-#Testing linear regression on new dataset
-#Import the required libraries
+# This is `./jupyter/RandomForest.ipynb` converted into
+# a Python file.
+
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
@@ -73,10 +75,18 @@ class Model:
         y_pred = classifier.predict(X_test)
         print(y_pred)
 
-    # Returns the name of a career based on normalized input values.
+    # Returns the top 3 career predictions based on normalized input values.
+    #
+    # The return value is an array of human-readable strings.
     def predict(self, vals):
-        pred_id = self.classifier.predict(vals)
-        return self.encoder.inverse_transform(pred_id)
+        prediction = self.classifier.predict_proba(vals)
+
+        top_3_indices = np.argsort(prediction[0])[-3:][::-1]
+
+        top_3_probs = prediction[0][top_3_indices]
+
+        print(top_3_probs)
+        return self.encoder.inverse_transform(top_3_indices)
 
 def model():
     return Model()

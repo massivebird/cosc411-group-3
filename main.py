@@ -36,7 +36,7 @@ def result_page():
     intrapersonal = (int(intrapersonal)-5)/15
     naturalist = (int(naturalist))/20
 
-    career = model.predict([[
+    careers = model.predict([[
         linguistic,
         musical,
         bodily,
@@ -47,7 +47,12 @@ def result_page():
         naturalist,
     ]])
 
-    return render_template('result.html', result=career[0])
+    return render_template(
+        'result.html',
+        career1=careers[0],
+        career2=careers[1],
+        career3=careers[2]
+    )
 
 # Create endpoints for serving static files.
 with app.test_request_context():
